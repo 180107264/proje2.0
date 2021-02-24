@@ -25,4 +25,4 @@ Releations-Q:
 
 Our dataset from Kaggle.com: "https://www.kaggle.com/aman9d/phishing-data?select=combined_dataset.csv"
 
-Our UML: 
+Our UML: ![alt text](Satan7172-UseCase-UML.png "Title")
