@@ -35,7 +35,7 @@ Example of phishing site attack
 
 * Which sites which user added?
 
-* Какие самые часто добавляемые сайты?
+* What are the most frequently added sites?
 
 * What are the most frequently added sites for the month?
 
