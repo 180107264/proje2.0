@@ -48,3 +48,5 @@ Example of phishing site attack
 <b>Our UML:</b>
 
 ![alt text](Satan7172-UseCase-UML.png "Title")
+
+![alt text](Satan7172-ER.png "Title")
