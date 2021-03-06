@@ -45,4 +45,6 @@ Example of phishing site attack
 
 [Our dataset from Kaggle.com](https://www.kaggle.com/aman9d/phishing-data?select=combined_dataset.csv)
 
-Our UML: ![alt text](Satan7172-UseCase-UML.png "Title")
+<b>Our UML:</b>
+
+![alt text](Satan7172-UseCase-UML.png "Title")
