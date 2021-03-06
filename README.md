@@ -4,7 +4,9 @@ Example of phishing site attack
 
 
 ![alt text](photo.jpeg "Title")
+
 <b> Solution </b>: Make site forum where users will be write and share information about phishing sites and attacks\
+
 <b> Type of user-interface </b> : Web
 
 ## Questions:
