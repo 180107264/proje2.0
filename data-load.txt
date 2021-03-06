@@ -1,5 +1,0 @@
-.open Proje.db
-.read proje-DDL-queries.sql
-.mode 'csv'
-.separator ','
-.import Phish_Info.csv Phish_Info
