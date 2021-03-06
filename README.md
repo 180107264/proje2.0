@@ -48,7 +48,7 @@ Example of phishing site attack
 <b>Our UML:</b>
 
 ![alt text](Satan7172-UseCase-UML.png "Title")
-
+<b>Our E/R diagram :</b>
 ![alt text](Satan7172-ER.png "Title")
 
 In this <b> ER diagram</b>, we can see a table of users who can add information to the <b> Phish_info </b> and <b> Phish2 </b> tables. <b>Administrators </b> can <b>retrieve</b> and <b>modify</b> data in all three tables. <b>Phish_info</b> is a table describing phishing attacks. <b>Phish2</b> is a table of phishing sites they found.<b> Phish1</b> is a table of phishing sites from the <b> Kaggle </b> ([DB Link](https://www.kaggle.com/aman9d/phishing-data?select=combined_dataset.csv)) database, as well as the sites that can be added by administrators.  And next to the table you can observe their attributes.
