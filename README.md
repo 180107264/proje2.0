@@ -31,17 +31,15 @@ Example of phishing site attack
 
 * What types of phishing attacks exist?
 
-* What sites can have phishing clones?
+* Which sites have the .com extension?
 
-* Which sites which user added?
+* What sites added user #0042?
 
-* What are the most frequently added sites?
+* What is Phish_Info where domain2 is www.qooqle.com?
 
-* What are the most frequently added sites for the month?
+* Which sites are from your country?
 
 * How many phishing sites currently exist (in our database)?
-
-* Are there sites from your country?
 
 [Our dataset from Kaggle.com](https://www.kaggle.com/aman9d/phishing-data?select=combined_dataset.csv)
 
