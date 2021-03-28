@@ -27,10 +27,10 @@ def home():
     con = sqlite3.connect('Proje.db')
     cur = con.cursor()
     if request.method == 'POST':
-         search = request.form['search']
-         search = (search,)
-         res = cur.execute('SELECT description from Phish_Info WHERE description = ?',search).fetchone()
-         request.form['result'] = res
+        search = "%" + request.form['search'] +"%"
+        search = (search,)
+        res = cur.execute("SELECT description, phish2_id from Phish_Info WHERE description LIKE ?",search).fetchone()
+        return render_template("./index.html",ans=res)
     else:
         return render_template("./index.html")
 
@@ -39,10 +39,10 @@ def index():
     con = sqlite3.connect('Proje.db')
     cur = con.cursor()
     if request.method == 'POST':
-        search = request.form['search']
+        search = "%" + request.form['search'] +"%"
         search = (search,)
-        res = cur.execute('SELECT description from Phish_Info WHERE description = ?',search).fetchone()
-        request.form['result'] = res
+        res = cur.execute("SELECT description, phish2_id from Phish_Info WHERE description LIKE ?",search).fetchone()
+        return render_template("./index.html",ans=res)
     else:
         return render_template("./index.html")
 @app.route('/about.html')
