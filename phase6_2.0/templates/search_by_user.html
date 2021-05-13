@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <title>Phising checker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/fontawesome.css') }}">
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" >
+    <link href="{{ url_for('static', filename='assets/css/proje2.css') }}" rel="stylesheet" >
+<!--
+
+Host Cloud Template
+
+https://templatemo.com/tm-541-host-cloud
+
+-->
+  </head>
+
+  <body>
+
+
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><h2>Proje <em> 2.0</em></h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Our Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./account.html">Account</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./search_by_user.html">Search by User</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./types_of_phish.html">Phish Types</a>
+              </li>
+            </ul>
+          </div>
+          <div class="functional-buttons">
+            <ul>
+              {% if session['id'] %}
+              <li><a href="/logout">Logout</a></li>
+            {% else %}
+              <li><a href="./login.html">Log in</a></li>
+              <li><a href="./register.html">Sign Up</a></li>
+             {% endif %}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="header-text caption">
+              <h2>Want to know which user ? </h2>
+              <div id="search-section">
+              	<form id="suggestion_form" method="POST">
+                <div class="searchText">
+                  <input type="text" name="name" class="searchText" placeholder="Enter your domain here..." autocomplete="on">
+                  <img src="../static/assets/images/search-icon.png" alt="" width="80px">
+                </div>
+                 </form>
+               <div class="advSearch_chkbox" style="color: white;">
+                {% if ans|length < 1 %}
+                <h4 style="text-align: center">There are no domain user added</h4>
+                {% else %}
+                <table>
+                    {% for a in ans %}
+                            <tr><td>{{ a[0] }}</td></tr>
+                            <tr>td{{ a[1] }}</tr>
+                    {% endfor %}
+                </table>
+                {% endif %}
+                </table>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Banner Ends Here -->
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/accordions.js"></script>
+
+
+    <script language = "text/Javascript">
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+    </script>
+
+  </body>
+</html>
